@@ -49,8 +49,6 @@ The example pipeline copy a "tags" table from source db to destination db
 #...
 def load_select_tables_from_database() -> None:
     """Use the sql_database source to reflect an entire database schema and load select tables from it.
-
-    This example sources data from the public Rfam MySQL database.
     """
     # Create a pipeline, data loaded will go into a new schema called "rfam_data"
     pipeline = dlt.pipeline(pipeline_name="rfam", destination='postgres', dataset_name="rfam_data")
